@@ -1,0 +1,12 @@
+// a useless comment
+dot 10, 10, 25, 25 // comment on a line
+	' yeah
+	// another indented comment
+/*
+	a comment block
+*/
+box 25,25,50,50,1
+REMSTART
+	another block comment
+REMEND
+print "YEAAAH!" // pls put on glasses

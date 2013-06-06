@@ -1,0 +1,13 @@
+#define MINUS(a,b) (a-b)
+
+#define BB 2
+#define AA (BB+BB)
+#define CC (AA+AA)
+#define DD MINUS(AA, BB)
+
+// addtext "magic: " + MINUS(DD, CC)
+a = AA + AA
+b = AA + CC
+c = MINUS(AA,AA)
+d = DD
+e = MINUS(DD,DD)

@@ -1,0 +1,2 @@
+#define MAKRO 100
+a = b + MAKRO

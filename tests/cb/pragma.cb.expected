@@ -1,0 +1,6 @@
+// #pragma dumb_debug
+SetWindow "line: " + 2
+SetWindow "line: " + 3 : a = 5 // a comment right here
+SetWindow "line: " + 4 : b = 6 : c = 5
+SetWindow "line: " + 5 : addtext "this is a normal line"
+SetWindow "line: " + 6 // empty row 

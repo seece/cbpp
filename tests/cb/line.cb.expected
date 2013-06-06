@@ -1,0 +1,5 @@
+AddText "this is line #"+1
+AddText "and this is " + 2
+
+
+AddText 5+" jea" 

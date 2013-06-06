@@ -1,0 +1,10 @@
+#define MAGIC
+#ifdef MAGIC
+	AddText "magic!"
+#endif
+
+#ifdef RINCEWIND
+	AddText "wizzard"
+#endif
+
+AddText "this should be normal"

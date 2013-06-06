@@ -1,0 +1,3 @@
+function getTrackFilename(id)
+	return "sync\synctrack"+id+".dat"
+endFunction

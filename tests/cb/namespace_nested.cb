@@ -1,0 +1,19 @@
+x# = 25.0
+y# = 35.0
+zoom# = 1.0
+dim sx as float
+dim sy as float
+
+namespace project <x,y,z,sx,sy,zoom>
+	dim mult as float
+	
+	namespace calc_mult<mult, zoom>
+		temp# = zoom * 1.5
+		mult = temp
+	endnamespace
+	
+	sx = (mult * x)/z
+	sy = (mult * y)/z
+endnamespace
+
+dot sx,sy

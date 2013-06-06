@@ -1,0 +1,4 @@
+#define SQUARESUM(a,b,c) (a*a + b + c)
+
+Print "sumstuff= " + SQUARESUM(1,2,3)
+WaitKey

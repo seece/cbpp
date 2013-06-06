@@ -1,0 +1,10 @@
+// #define MAGIC
+// #ifdef MAGIC
+	AddText "magic!"
+// #endif
+
+
+
+
+
+AddText "this should be normal"

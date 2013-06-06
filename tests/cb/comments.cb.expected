@@ -1,0 +1,2 @@
+// #define MAKRO 100
+AddText "this is a simple line" // a MAKRO in a comment

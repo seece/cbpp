@@ -1,0 +1,6 @@
+// #define RADTODEG(a) ((a/(2.0*PI))*360.0)
+
+rads# = 1.0
+AddText rads + " radians = " + ((rads/(2.0*PI))*360.0) + " degrees "
+DrawScreen
+WaitKey

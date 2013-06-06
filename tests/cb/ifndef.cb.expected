@@ -1,0 +1,11 @@
+// #define MAGIC
+
+// #ifndef MAGIC
+
+
+
+
+AddText "output me pls"
+// #endif
+
+AddText "this should be normal"

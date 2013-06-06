@@ -1,0 +1,4 @@
+// #define root(a) sqrt(a)
+
+addtext "" + sqrt(getKey())
+addtext "" + sqrt(asc(sqrt(64)))

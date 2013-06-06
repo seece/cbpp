@@ -1,0 +1,11 @@
+#define MAGIC
+
+#ifndef MAGIC
+AddText "do not output me" 
+#endif
+
+#ifndef THIS_DOES_NOT_EXIST
+AddText "output me pls"
+#endif
+
+AddText "this should be normal"

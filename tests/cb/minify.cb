@@ -1,0 +1,21 @@
+	row = -1 + 2^ 2*3
+	
+	f = openToRead(path)
+	
+	objectid = 0
+	infoblock  = getModelInfo(f, objectid)
+	
+	vertex_amount = peekInt(infoblock, 0)
+	
+	// a temporary array for our vertices and lines
+	dim _verts(vertex_amount-1, 2) as float
+	dim _lineverts(max_line_amount-1, 1, 2) as float
+	debugtext = "oh yeah let's set a = 5.0 if b < 0.5 + 2" + (2.0*delta#*0.1)
+	b# = 5.0 + 0.2*5.0 + 1.421
+	
+	if current_object < 0 then makeError("vertex 0.5 not inside object at row " + row + " in " + path$)
+		if current_object <> objectid then goto continue
+		if a => limit then goto continue
+		
+		vx# = float(getWord(l, 2))
+		vy# = float(getWord(l, 3))

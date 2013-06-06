@@ -1,0 +1,5 @@
+AddText "this is line #"+__LINE__
+AddText "and this is " + __LINE__
+
+
+AddText __LINE__+" jea" 

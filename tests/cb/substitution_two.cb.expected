@@ -1,0 +1,3 @@
+// #define SQUARE(a) (a*a)
+Print "5^2 = " + (5*5)
+WaitKey

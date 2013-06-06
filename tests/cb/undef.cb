@@ -1,0 +1,12 @@
+#define MAGIC
+#ifdef MAGIC
+	AddText "magic!"
+#endif
+
+#undef MAGIC
+
+#ifdef MAGIC
+	AddText "maagic"
+#endif
+
+AddText "this should be normal"

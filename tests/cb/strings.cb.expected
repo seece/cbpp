@@ -1,0 +1,5 @@
+// #define GENRE "dnb"
+// #define POST(genre) "post-"+genre
+
+AddText "my favourite GENRE is " + "dnb"
+AddText "but even better is " + "post-"+"dnb"

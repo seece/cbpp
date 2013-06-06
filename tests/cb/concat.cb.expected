@@ -1,0 +1,4 @@
+// #define JOIN(a, b) a ## b
+
+Print "sumstuff= " + 12
+WaitKey

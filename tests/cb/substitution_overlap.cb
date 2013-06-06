@@ -1,0 +1,9 @@
+#define AB "oy"
+#define ABBA "waterloo"
+#define SUM(a,b) (a+b)
+#define SQUARESUM(a,b) (a*a+b*b)
+
+AddText "abba + ab + abba = " + ABBA + AB + ABBA
+AddText "result: " + SQUARESUM(2,3)
+DrawScreen
+WaitKey

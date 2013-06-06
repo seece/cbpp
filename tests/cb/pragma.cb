@@ -1,0 +1,6 @@
+#pragma dumb_debug
+
+a = 5 // a comment right here
+b = 6 : c = 5
+addtext "this is a normal line"
+// empty row 

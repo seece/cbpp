@@ -1,0 +1,13 @@
+x# = 25.0
+y# = 35.0
+dim sx as float
+dim sy as float
+
+// namespace project <x,y,z,sx,sy>
+	_project_mult# = 100.0
+	
+	sx = (_project_mult * x)/z
+	sy = (_project_mult * y)/z
+// endnamespace
+
+dot sx,sy

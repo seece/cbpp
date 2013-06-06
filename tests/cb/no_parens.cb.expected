@@ -1,0 +1,4 @@
+// #define MAKRO(a) a*a
+AddText "this is a simple line " + (5*5) 
+DrawScreen
+WaitKey
