@@ -46,4 +46,4 @@ Please note that the macro parameter names shouldn't occur in the macro expansio
 ### License
 This software is released under the MIT License, see COPYING for details.
 
-[1]: http://lofibucket.com/download/cbpp_editor_01.zip
+[1]: http://lofibucket.com/download/cbpp_editor_02.zip
