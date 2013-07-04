@@ -29,9 +29,7 @@ class IfdefOperation(Operation):
 
 		if not self.stack.isEmpty():
 			#print(str(state.row) + " : " + str(self.stack.arr))
-			if self.stack.top():
-				pass 
-			else:
+			if self.stack.contains(False):
 				skip = True
 
 		dirsearch = regex['directive'].search(line)
