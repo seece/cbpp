@@ -15,6 +15,7 @@ from culloperation import CullOperation
 from minifyoperation import MinifyOperation
 from dotoperation import DotOperation
 from commentoperation import CommentOperation
+from multilineoperation import MultilineMacroOperation
 from error import infos, errors, warnings
 from regex import regex
 
@@ -70,14 +71,13 @@ class Processor:
 		state.row = 0
 		out = [] # the actual contents of the output file
 
-		ifdefop = IfdefOperation()
-		macro_op = MacroOperation() 
-		debug_op = DebugOperation() 
 		operations = []
-		operations.append(ifdefop)
-		operations.append(debug_op)
+		operations.append(IfdefOperation())
+		operations.append(DebugOperation())
 		operations.append(CommentOperation())
-		operations.append(macro_op)
+		operations.append(MacroOperation())
+		""" TODO: #include handling might clash with DECORATE definitions """
+		operations.append(MultilineMacroOperation())
 		operations.append(DotOperation())
 		operations.append(MinifyOperation())
 		operations.append(CullOperation())

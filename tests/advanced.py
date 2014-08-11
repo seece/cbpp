@@ -89,6 +89,15 @@ class minifyWithCulling(Test):
 		args.minify= True
 		return args
 
+class multilineParse(Test):
+	def setup(self):
+		self.name = "multiline macro parsing"
+		self.sourcefile = "tests/decorate/multiline_parse.txt"
+
+class multilineExpand(Test):
+	def setup(self):
+		self.name = "basic multiline macro expansion"
+		self.sourcefile = "tests/decorate/multiline_expand_basic.txt"
 
 testlist = []
 

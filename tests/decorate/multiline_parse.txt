@@ -1,0 +1,3 @@
+#macro TESTMACRO(a, b)
+Log(d:a, d:b);
+#endmacro
