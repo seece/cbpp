@@ -22,7 +22,9 @@ passed = 0
 
 init()
 
-for t in all_tests:
+print (str(all_tests))
+
+for testclass in all_tests:
 	real_stdout = sys.stdout
 
 	infos.log = []
@@ -32,7 +34,8 @@ for t in all_tests:
 	infos.emit = False
 	warnings.emit = False
 	errors.emit = False
-	test = t()
+
+	test = testclass()
 
 	if test.apply():
 		sys.stdout.write(Fore.GREEN + "OK" + Fore.RESET + "\t")
