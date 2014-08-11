@@ -1,0 +1,7 @@
+#macro TESTMACRO
+Log(s:"in this article all the names have been changed");
+Log(s:"except Keijo's");
+#endmacro
+
+TESTMACRO
+TESTMACRO

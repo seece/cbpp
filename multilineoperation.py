@@ -55,5 +55,4 @@ class MultilineMacroOperation(MacroOperation):
 				output = expandAll(line, self.multimacros, Stack(), state)
 
 		result.line = output
-		result.discard = False
 		return result

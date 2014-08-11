@@ -99,6 +99,16 @@ class multilineExpand(Test):
 		self.name = "basic multiline macro expansion"
 		self.sourcefile = "tests/decorate/multiline_expand_basic.txt"
 
+class multilineExpandNoParams(Test):
+	def setup(self):
+		self.name = "multiline macro with no parameters"
+		self.sourcefile = "tests/decorate/multiline_expand_noparams.txt"
+
+class multilineExpandMultiple(Test):
+	def setup(self):
+		self.name = "multiple multiline macros"
+		self.sourcefile = "tests/decorate/multiline_expand_multiple.txt"
+
 testlist = []
 
 for name, obj in inspect.getmembers(sys.modules[__name__], inspect.isclass):

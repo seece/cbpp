@@ -101,7 +101,6 @@ class MacroOperation(Operation):
 			output = expandAll(line, state.macros, visited, state)
 
 		result.line = output
-		result.discard = False
 		return result
 
 # returns a regex string that matches this identifier name

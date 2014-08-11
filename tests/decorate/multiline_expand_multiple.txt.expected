@@ -1,0 +1,19 @@
+// #macro TESTMACRO(a, b)
+// Log(s:"a is ", d:a);
+// Log(s:"b is ", d:b);
+// #endmacro
+
+// #macro SPAM(a, b)
+// Log(s:"a is ", d:a);
+// Log(s:"a is ", d:a, s:"!");
+// Log(s:"a is ", d:a, s:"!", d:a, d:a);
+// #endmacro
+
+Log(s:"a is ", d:1);
+Log(s:"b is ", d:2);
+Log(s:"a is ", d:3);
+Log(s:"b is ", d:4);
+
+Log(s:"a is ", d:5);
+Log(s:"a is ", d:5, s:"!");
+Log(s:"a is ", d:5, s:"!", d:5, d:5);
