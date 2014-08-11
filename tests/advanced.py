@@ -51,6 +51,7 @@ class recursion(Test):
 	def setup(self):
 		self.sourcefile = "tests/cb/recursion.cb"
 
+"""
 class namespaceBasic(Test):
 	def setup(self):
 		self.sourcefile = "tests/cb/namespace_basic.cb"
@@ -58,6 +59,7 @@ class namespaceBasic(Test):
 class namespaceNested(Test):
 	def setup(self):
 		self.sourcefile = "tests/cb/namespace_nested.cb"
+"""
 
 class culling(Test):
 	def setup(self):
