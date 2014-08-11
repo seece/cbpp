@@ -22,8 +22,6 @@ passed = 0
 
 init()
 
-print (str(all_tests))
-
 for testclass in all_tests:
 	real_stdout = sys.stdout
 

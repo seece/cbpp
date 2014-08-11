@@ -49,7 +49,7 @@ class Test(object):
 			line2 = e.readline()
 
 			if line1 != line2:
-				sys.stdout.write("  Expected: \t" + line2)
+				sys.stdout.write("  in %s:\n  Expected:\t%s" % (expected_path, line2))
 				sys.stdout.write("  Got:\t\t" + line1)
 				return False
 
