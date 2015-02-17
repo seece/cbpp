@@ -120,7 +120,6 @@ class Macro:
 				errors.add(None, "Invalid parameters")
 				return None
 			
-			print("params " + str(self.parameters))
 			for i, p in enumerate(self.parameters):
 				reg = re.compile(r"(?P<name>(?P<hash>#)?" + p + r")(\W|$)+")
 						
@@ -128,7 +127,6 @@ class Macro:
 					hits = 0
 					namematch = reg.finditer(replacement)
 					
-
 					for n in namematch:
 						if checkIfInsideString(n.start('name'), strings):
 							continue
