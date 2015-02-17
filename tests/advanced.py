@@ -89,6 +89,11 @@ class minifyWithCulling(Test):
 		args.minify= True
 		return args
 
+class stringify(Test):
+	def setup(self):
+		self.name = "stringify macro parameters"
+		self.sourcefile = "tests/cb/stringify.cb"
+		
 class multilineParse(Test):
 	def setup(self):
 		self.name = "multiline macro parsing"

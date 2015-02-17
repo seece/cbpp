@@ -119,19 +119,25 @@ class Macro:
 			if len(args.arr) != len(self.parameters):
 				errors.add(None, "Invalid parameters")
 				return None
-
+			
+			print("params " + str(self.parameters))
 			for i, p in enumerate(self.parameters):
-				reg = re.compile(r"(\W|^)+(?P<name>" + p + r")(\W|$)+")
-
+				reg = re.compile(r"(?P<name>(?P<hash>#)?" + p + r")(\W|$)+")
+						
 				while True:
 					hits = 0
 					namematch = reg.finditer(replacement)
+					
 
 					for n in namematch:
 						if checkIfInsideString(n.start('name'), strings):
 							continue
 
-						replacement = n.string[:n.start('name')] + args.arr[i] + n.string[n.end('name'):]
+						val = args.arr[i]
+						
+						if n.group('hash'):
+							val = '"' + val + '"'
+						replacement = n.string[:n.start('name')] + val + n.string[n.end('name'):]
 						hits += 1
 						break
 					

@@ -1,0 +1,3 @@
+#define makro(_name) print "my name is " + #_name
+
+makro(gustav)
