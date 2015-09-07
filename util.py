@@ -1,3 +1,5 @@
+import re
+
 class ArgumentList:
 	#length = 0  # the length of the original argument list in characters
 	#arr = [] 	# array of argument strings
@@ -127,8 +129,19 @@ def checkIfInsideString(string_start, strings):
 			return True
 	return False
 
+	
+quoteregex = re.compile('("[^"]*")')
+	
+# TODO use "[^"]*" regex instead
 def scanForStrings(line):
 	strings = []
+	matches = quoteregex.finditer(line)
+	for m in matches:
+		strings.append(StringPos(m.start(0), m.end(1)))
+	
+	return strings
+	
+	"""
 	string_start_pos = 0
 	instring = False
 
@@ -143,6 +156,7 @@ def scanForStrings(line):
 				string_start_pos = i
 
 	return strings
+	"""
 
 def waitForEnter():
 	input("Press Enter to continue...")
