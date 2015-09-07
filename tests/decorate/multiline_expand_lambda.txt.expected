@@ -1,0 +1,7 @@
+// #macro TESTMACRO(a, b)
+// Log(s:"a is ", d:a);
+// Log(s:"b is ", d:b);
+// #endmacro_oneline
+
+Log(s:"a is ", d:1);:Log(s:"b is ", d:2);
+Log(s:"a is ", d:3);:Log(s:"b is ", d:4);

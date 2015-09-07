@@ -114,6 +114,11 @@ class multilineExpandMultiple(Test):
 		self.name = "multiple multiline macros"
 		self.sourcefile = "tests/decorate/multiline_expand_multiple.txt"
 
+class multilineExpandLambda(Test):
+	def setup(self):
+		self.name = "basic multiline lambda expansion"
+		self.sourcefile = "tests/decorate/multiline_expand_lambda.txt"
+		
 testlist = []
 
 for name, obj in inspect.getmembers(sys.modules[__name__], inspect.isclass):

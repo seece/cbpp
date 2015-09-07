@@ -39,6 +39,12 @@ class MultilineMacroOperation(MacroOperation):
 				self.macro.payload = self.macro.payload.rstrip('\n')
 				self.multimacros[self.macro.name] = self.macro
 				self.macro = None
+				
+			elif directive == "#endmacro_oneline":
+				#print ("macro %s ends") % (self.macro.name)
+				self.macro.payload = self.macro.payload.rstrip('\n').replace('\n', ':')
+				self.multimacros[self.macro.name] = self.macro
+				self.macro = None
 
 			else:
 				output = output
