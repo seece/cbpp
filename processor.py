@@ -78,6 +78,7 @@ class Processor:
 		operations.append(MacroOperation())
 		""" TODO: #include handling might clash with DECORATE definitions """
 		operations.append(MultilineMacroOperation())
+		
 		operations.append(DotOperation())
 		operations.append(MinifyOperation())
 		operations.append(CullOperation())

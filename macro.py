@@ -65,6 +65,7 @@ class Macro:
 		self.payload = ""
 		self.nameregex = None
 		self.flag = False 	# if this macro is just a flag, not a substitution
+		self.oneliner = False # used by multiline operation
 
 		if dirsearch == None:
 			return

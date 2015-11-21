@@ -80,7 +80,7 @@ class MacroOperation(Operation):
 				if temp_macro.name in state.macros:
 					del state.macros[temp_macro.name]
 				else:
-					warnings.add("Trying to undefine a nonexistent macro " + temp_macro.name)					
+					warnings.add(state.row, "Trying to undefine a nonexistent macro " + temp_macro.name)					
 			elif directive == "#pragma":
 				if state.args.verbose: print("pragma: " + identifier)
 				state.args = handlePragma(identifier, state.args)
@@ -107,6 +107,10 @@ class MacroOperation(Operation):
 def nameRegex(name):
 	return "(\W|^)+(?P<name>" + name + r")(\W|$)+"
 
+lineNameRegex = re.compile(nameRegex("__LINE__"))
+fileNameRegex = re.compile(nameRegex("__FILE__"))
+concatNameRegex = re.compile(r"(?P<name>" + " ## " + r")")
+	
 # applies some additional macros to the macro array
 # and the returns the keyset
 def getMacroKeys(macrodict, state):
@@ -114,18 +118,18 @@ def getMacroKeys(macrodict, state):
 	linenum = Macro(None, "")
 	linenum.name = "__LINE__" 
 	linenum.payload = str(state.row)
-	linenum.nameregex = re.compile(nameRegex(linenum.name))
+	linenum.nameregex = lineNameRegex
 
 	filename= Macro(None, "")
 	filename.name = "__FILE__" 
 	filename.payload = str('"' + state.filename + '"')
-	filename.nameregex = re.compile(nameRegex(filename.name))
+	filename.nameregex = fileNameRegex
 
 	# temporary concatenation macro, must run LAST
 	concat = Macro(None, "")
 	concat.name = " ## " 
 	concat.payload = ""
-	concat.nameregex = re.compile(r"(?P<name>" + concat.name + r")")
+	concat.nameregex = concatNameRegex
 
 	macrodict[linenum.name] = linenum
 	macrodict[filename.name] = filename
